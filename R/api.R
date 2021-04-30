@@ -47,34 +47,22 @@ print.centralperk <- function(x, ...) {
 
 
 single_character <- function(character) {
+  ## retrieve all quotes from API
   allquotes <- friends_quotes_api("")$content
+
+  ## set characters
   char_list <- map(allquotes, "character") %>% unlist()
   names(allquotes) <- char_list
+
+  ## find index of quotes from chosen character
   char_index <- which(names(allquotes) == character)
+
+  ## pick one random quote from index
   char_index_random <- sample(char_index, 1)
+
+  ## retrieve quote and assign to class
   single_quote <- pluck(allquotes, char_index_random)
   structure(single_quote, class = "centralperk")
-
-
-
-
-  asdf <- as_tibble(allquotes, .name_repair = "minimal")
-
-  names(asdf) <- char_list
-
-  asdf %>% select(contains("Jo"))
-
-
-
-
-
-
-
-  names(allquotes) <- char_list
-
-  allquotes[["Joey"]]
-
-  structure(friends_quotes_api("")$content, class = "centralperk")
 }
 
 
@@ -83,16 +71,3 @@ centralperk <- function() {
 }
 
 
-
-
-
-contento <- httr::content(resp, as = "text")
-
-
-
-
-
-httr::GET(url = "https://friends-quotes-api.herokuapp.com/quotes/random") -> elrespon
-
-
-httr::content(elrespon)
