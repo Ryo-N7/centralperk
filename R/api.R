@@ -44,6 +44,10 @@ print.centralperk <- function(x, ...) {
       paste(">", x$character))
 }
 
+# as.character.centralperk <- function(x, ...) {
+#   paste(c(x$quote, x$character), collapse = "\n~ ")
+# }
+
 
 
 single_character <- function(character) {
@@ -54,11 +58,16 @@ single_character <- function(character) {
   char_list <- map(allquotes, "character") %>% unlist()
   names(allquotes) <- char_list
 
-  ## find index of quotes from chosen character
-  char_index <- which(names(allquotes) == character)
-
   ## pick one random quote from index
-  char_index_random <- sample(char_index, 1)
+  case_when(
+    character == "Chandler" ~ {char_index_random <- 9},
+    character == "Monica" ~ {char_index_random <- 3},
+    TRUE ~ {
+      ## find index of quotes from chosen character
+      char_index <- which(names(allquotes) == character)
+      char_index_random <- as.numeric(sample(char_index, 1) )
+    }
+  )
 
   ## retrieve quote and assign to class
   single_quote <- pluck(allquotes, char_index_random)
@@ -71,3 +80,27 @@ centralperk <- function() {
 }
 
 
+
+ross <- function() {
+  single_character("Ross")
+}
+
+rachel <- function() {
+  single_character("Rachel")
+}
+
+monica <- function() {
+  single_character("Monica")
+}
+
+joey <- function() {
+  single_character("Joey")
+}
+
+phoebe <- function() {
+  single_character("Phoebe")
+}
+
+chandler <- function() {
+  single_character("Chandler")
+}
