@@ -1,14 +1,13 @@
 Package: centralperk
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: R Client For Friends Quotes API
+Version: 0.1.0
 Authors@R: 
     person(given = "Ryo",
            family = "Nakagawara",
            role = c("aut", "cre"),
            email = "ryonakagawara@gmail.com")
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+Description: Get 18 different quotes from the main characters of 'Friends'. Quotes from "melanieseltzer"'s "friends-quotes-api". Heavily inspired by Adam Gruer's "goodshirt" package.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
@@ -16,4 +15,5 @@ RoxygenNote: 7.1.1
 Suggests: 
     testthat
 Imports: 
-    httr
+    httr,
+    purrr
