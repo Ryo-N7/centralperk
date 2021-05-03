@@ -9,4 +9,3 @@
 \description{
 S3 print method for 'centralperk' class
 }
-\keyword{internal}

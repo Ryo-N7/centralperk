@@ -1,7 +1,7 @@
 #' Main interface function to "Friends Quotes API"
 #' @param path Parameter for API. Leave blank, any integer, or 'random'
 #' @keywords internal
-#' @importFrom httr modify_url user_agent GET content
+#' @importFrom httr modify_url user_agent GET content stop_for_status
 #' @return list of class 'friends_quotes_api' with API response
 
 friends_quotes_api <- function(path) {
@@ -18,6 +18,8 @@ friends_quotes_api <- function(path) {
 
   resp <- httr::GET(set_url, ua)
 
+  httr::stop_for_status(resp, task = "retrieve quote. Check your internet connection and try again later")
+
   structure(
     list(
       content = httr::content(resp),
@@ -29,7 +31,7 @@ friends_quotes_api <- function(path) {
 }
 
 #' S3 print method for 'friends_quotes_api' class
-#' @keywords internal
+#' @export
 
 print.friends_quotes_api <- function(x, ...) {
   cat("<Friends-Quotes ", x$path, ">\n", sep = "")
@@ -38,7 +40,7 @@ print.friends_quotes_api <- function(x, ...) {
 }
 
 #' S3 print method for 'centralperk' class
-#' @keywords internal
+#' @export
 
 print.centralperk <- function(x, ...) {
   cat("\n",
@@ -70,6 +72,7 @@ single_character <- function(character) {
   } else {
     ## find index of quotes from chosen character
     char_index <- which(names(allquotes) == character)
+    ## need to explicitly set to numeric of type error with integer
     char_index_random <- as.numeric(sample(char_index, 1))
   }
 

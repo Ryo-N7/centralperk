@@ -9,4 +9,3 @@
 \description{
 S3 print method for 'friends_quotes_api' class
 }
-\keyword{internal}
