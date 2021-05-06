@@ -1,18 +1,30 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+<center>
+
 <img src="https://i.imgur.com/zhTAyaZ.jpg" style="display: block; margin: auto;" width = "450" />
+
+</center>
 
 # centralperk
 
 <!-- badges: start -->
 
+[![License:
+MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
 
 R client for [Melanie Seltzer](https://github.com/melanieseltzer)’s
 [“friends-quotes-api”](https://friends-quotes-api.herokuapp.com/).
 Inspired by [{goodshirt}](https://github.com/adam-gruer/goodshirt) by
 [Adam Gruer](https://github.com/adam-gruer).
+
+<center>
+
+<img src="https://i.imgur.com/X7W62AE.gif" style="display: block; margin: auto;" width = "450" />
+
+</center>
 
 ## Installation
 
@@ -31,9 +43,9 @@ library(centralperk)
 
 centralperk()
 #> 
-#>  Look at me! I'm Chandler! Could I be wearing any more clothes?! 
+#>  Pivot! Pivot! Pivot! Pivot! Pivot! 
 #> 
-#>  > Joey
+#>  > Ross
 ```
 
 Each main character:
@@ -47,7 +59,7 @@ monica()
 
 joey()
 #> 
-#>  How you doin? 
+#>  Yeah, that's right. I stepped up! She's my friend and she needed help. And if I have to I'd pee on any one of you. 
 #> 
 #>  > Joey
 
@@ -59,13 +71,13 @@ rachel()
 
 phoebe()
 #> 
-#>  This is brand-new information! 
+#>  Phoebe. That's P, as in Phoebe, H as in hoebe, O as in oebe, E as in ebe, B as in bebe, and E as in 'Ello there mate. 
 #> 
 #>  > Phoebe
 
 ross()
 #> 
-#>  I grew up in a house with Monica, okay. If you didn't eat fast, you didn't eat. 
+#>  Unagi. 
 #> 
 #>  > Ross
 

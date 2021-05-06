@@ -13,14 +13,21 @@ knitr::opts_chunk$set(
 )
 ```
 
+<center>
 <img src="https://i.imgur.com/zhTAyaZ.jpg" style="display: block; margin: auto;" width = "450" />
+</center>
 
 # centralperk
 
 <!-- badges: start -->
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
 
 R client for [Melanie Seltzer](https://github.com/melanieseltzer)'s ["friends-quotes-api"](https://friends-quotes-api.herokuapp.com/). Inspired by [{goodshirt}](https://github.com/adam-gruer/goodshirt) by [Adam Gruer](https://github.com/adam-gruer). 
+
+<center>
+<img src="https://i.imgur.com/X7W62AE.gif" style="display: block; margin: auto;" width = "450" />
+</center>
 
 ## Installation
 
