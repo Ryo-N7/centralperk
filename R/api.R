@@ -49,6 +49,12 @@ print.centralperk <- function(x, ...) {
       paste(">", x$character))
 }
 
+#' S3 as.character method for 'centralperk' class
+#' @export
+as.character.centralperk <- function(x, ...) {
+  paste(c(x$quote, x$character), collapse = "\n\n> ")
+}
+
 #' Grab quote for a single character
 #' @param character Name of main Friends character
 #' @keywords internal

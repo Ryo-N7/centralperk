@@ -13,42 +13,46 @@ knitr::opts_chunk$set(
 )
 ```
 
+<img src="https://i.imgur.com/zhTAyaZ.jpg" style="display: block; margin: auto;" width = "450" />
+
 # centralperk
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of centralperk is to ...
+R client for [Melanie Seltzer](https://github.com/melanieseltzer)'s ["friends-quotes-api"](https://friends-quotes-api.herokuapp.com/). Inspired by [{goodshirt}](https://github.com/adam-gruer/goodshirt) by [Adam Gruer](https://github.com/adam-gruer). 
 
 ## Installation
 
-You can install the released version of centralperk from [CRAN](https://CRAN.R-project.org) with:
+You can install the latest version of {centralperk} from Github with:
 
 ``` r
-install.packages("centralperk")
+devtools::install_github("Ryo-N7/centralperk")
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Random quote:
 
-```{r example}
-#library(centralperk)
-## basic example code
+```{r random-quote}
+library(centralperk)
+
+centralperk()
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+Each main character:
 
-```{r cars}
-summary(cars)
+```{r characters-quotes}
+monica()
+
+joey()
+
+rachel()
+
+phoebe()
+
+ross()
+
+chandler()
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!

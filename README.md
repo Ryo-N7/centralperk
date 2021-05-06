@@ -1,52 +1,77 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+<img src="https://i.imgur.com/zhTAyaZ.jpg" style="display: block; margin: auto;" width = "450" />
+
 # centralperk
 
 <!-- badges: start -->
 
 <!-- badges: end -->
 
-The goal of centralperk is to …
+R client for [Melanie Seltzer](https://github.com/melanieseltzer)’s
+[“friends-quotes-api”](https://friends-quotes-api.herokuapp.com/).
+Inspired by [{goodshirt}](https://github.com/adam-gruer/goodshirt) by
+[Adam Gruer](https://github.com/adam-gruer).
 
 ## Installation
 
-You can install the released version of centralperk from
-[CRAN](https://CRAN.R-project.org) with:
+You can install the latest version of {centralperk} from Github with:
 
 ``` r
-install.packages("centralperk")
+devtools::install_github("Ryo-N7/centralperk")
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Random quote:
 
 ``` r
-#library(centralperk)
-## basic example code
+library(centralperk)
+
+centralperk()
+#> 
+#>  Look at me! I'm Chandler! Could I be wearing any more clothes?! 
+#> 
+#>  > Joey
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+Each main character:
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+monica()
+#> 
+#>  Guys can fake it? Unbelievable! The one thing that’s ours! 
+#> 
+#>  > Monica
+
+joey()
+#> 
+#>  How you doin? 
+#> 
+#>  > Joey
+
+rachel()
+#> 
+#>  Just so you know, it's not that common, it doesn't happen to every guy, and it is a big deal! 
+#> 
+#>  > Rachel
+
+phoebe()
+#> 
+#>  This is brand-new information! 
+#> 
+#>  > Phoebe
+
+ross()
+#> 
+#>  I grew up in a house with Monica, okay. If you didn't eat fast, you didn't eat. 
+#> 
+#>  > Ross
+
+chandler()
+#> 
+#>  I'm not so good with the advice. Can I interest you in a sarcastic comment? 
+#> 
+#>  > Chandler
 ```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub\!
